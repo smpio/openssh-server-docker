@@ -1,6 +1,6 @@
 FROM alpine:3.15.0
 
-RUN apk add --no-cache --upgrade openssh-server openssh-sftp-server && \
+RUN apk add --no-cache --upgrade openssh && \
     mv /etc/ssh/sshd_config /etc/sshd_config && \
     echo -e '\n\n# == Docker image config ==' >> /etc/sshd_config && \
     echo 'PasswordAuthentication no' >> /etc/sshd_config && \
