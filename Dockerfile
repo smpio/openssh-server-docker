@@ -1,4 +1,4 @@
-FROM alpine:3.18.4
+FROM alpine:3.19.1
 
 RUN apk add --no-cache --upgrade openssh && \
     mv /etc/ssh/sshd_config /etc/sshd_config && \
